@@ -1,0 +1,6 @@
+var jsonObject = {
+	"Level1":[
+		{"answer1":"ratatouille"},
+		{"answer2":"aladdin"},
+		{"answer3":"pocahontas"}
+]}
