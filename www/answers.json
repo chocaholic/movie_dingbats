@@ -1,12 +1,12 @@
 var jsonObject = {
 	"LevelQ1":[
-	{"img1":"../www/img/quiz-9.jpg"},
-	{"img2":"../www/img/logo.jpg"}
+	{"img":"../www/img/quiz-9.jpg"},
+	{"img":"../www/img/logo.png"}
 	],
 	
 	"LevelA1":[
-		{"answer1":"ratatouille"},
-		{"answer2":"aladdin"},
-		{"answer3":"pocahontas"}
+		{"answer":"ratatouille"},
+		{"answer":"aladdin"},
+		{"answer":"pocahontas"}
 	]
 }

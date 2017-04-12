@@ -1,20 +1,33 @@
+var lvl = 1;
 $(document).ready(function() {
-    var level = jsonObject.LevelQ1[0];
-    document.getElementById("movieimg").innerHTML = '<img src=' + level.img1 + ' />';
+    checkLevel(lvl);
 });
+
+function checkLevel(lvl) {
+    var levelArray = jsonObject.LevelQ1;
+    if (lvl <= levelArray.length) {
+        var levelQ = jsonObject.LevelQ1[lvl-1];
+        document.getElementById("movieimg").innerHTML = '<img src=' + levelQ.img + ' />';
+    }
+    else {
+        alert("end");
+    }
+}
 
 $(".ansbtn").click(function (event) {
     event.preventDefault();
 
-        var val = $("#ans").val();
-        val = val.toLowerCase().replace(/\s+/g, '');
+    var val = $("#ans").val();
+    val = val.toLowerCase().replace(/\s+/g, '');
 
-        var result = jsonObject.LevelA1[0];
+    var result = jsonObject.LevelA1[lvl-1];
 
-        if (val == result.answer1) {
-            alert("Great");
-        }
-        else {
-            alert("nope");
-        }    
+    if (val == result.answer) {
+        alert("Great");
+        lvl++;
+        checkLevel(lvl);
+    }
+    else {
+        alert("nope");
+    }    
 });
