@@ -7,7 +7,7 @@ function checkLevel(lvl) {
     var levelArray = jsonObject.LevelQ1;
     if (lvl <= levelArray.length) {
         var levelQ = jsonObject.LevelQ1[lvl - 1];
-        document.getElementById("movieimg").innerHTML = '<img src=' + levelQ.img + ' />';
+        document.getElementById("movieimg").innerHTML = '<img src=' + Object.values(levelQ) + ' />';
     }
     else {
         alert("end");
@@ -22,7 +22,7 @@ $(".ansbtn").click(function (event) {
 
     var result = jsonObject.LevelA1[lvl - 1];
 
-    if (val == result.answer) {
+    if (val == Object.values(result)) {
         alert("Great");
         lvl++;
         checkLevel(lvl);
