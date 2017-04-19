@@ -10,7 +10,7 @@ function checkLevel(lvl) {
         document.getElementById("movieimg").innerHTML = '<img src=' + Object.values(levelQ) + ' />';
     }
     else {
-        alert("end");
+        $('#endlevel').modal('show');
     }
 }
 
@@ -25,7 +25,7 @@ $(".ansbtn").click(function (event) {
     if (answer == Object.values(result)) {
         $("#ans").val('');
         $(".wrong").hide();
-        $('#\\myModal').modal('show');
+        $('#correctAns').modal('show');
     }
     else {
 //        alert("nope");
