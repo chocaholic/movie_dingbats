@@ -1,6 +1,15 @@
+.question {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
 img {
     height: auto;
     width: auto;
     max-height: 300px;
     max-width: 300px;
+}
+
+.ansbtn {
+    margin: 10px 0;
 }

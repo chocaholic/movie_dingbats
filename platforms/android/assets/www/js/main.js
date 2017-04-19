@@ -17,12 +17,13 @@ function checkLevel(lvl) {
 $(".ansbtn").click(function (event) {
     event.preventDefault();
 
-    var val = $("#ans").val();
-    val = val.toLowerCase().replace(/\s+/g, '');
+    var answer = $("#ans").val();
+    answer = answer.toLowerCase().replace(/\s+/g, '');
 
     var result = jsonObject.LevelA1[lvl - 1];
 
-    if (val == Object.values(result)) {
+    if (answer == Object.values(result)) {
+        $("#ans").val('');
         alert("Great");
         lvl++;
         checkLevel(lvl);
