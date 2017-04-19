@@ -13,3 +13,10 @@ img {
 .ansbtn {
     margin: 10px 0;
 }
+
+.wrong {
+    display: none;
+    font-size: xx-large;
+    color: red;
+    text-align: center;
+}

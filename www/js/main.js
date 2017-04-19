@@ -24,11 +24,17 @@ $(".ansbtn").click(function (event) {
 
     if (answer == Object.values(result)) {
         $("#ans").val('');
-        alert("Great");
-        lvl++;
-        checkLevel(lvl);
+        $(".wrong").hide();
+        $('#\\myModal').modal('show');
     }
     else {
-        alert("nope");
+//        alert("nope");
+        $(".wrong").show();
     }
+});
+
+$(".next").click(function (event) {
+    event.preventDefault();
+    lvl++;
+    checkLevel(lvl);
 });
