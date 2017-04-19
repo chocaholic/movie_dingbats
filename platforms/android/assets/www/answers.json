@@ -1,21 +1,27 @@
 var jsonObject = {
 	"LevelQ1":[
-	{"img1":"../www/img/ratatouille.jpg"},
-	{"img2":"../www/img/findingnemo.jpg"},
-	{"img3":"../www/img/lionking.jpg"},
-	{"img4":"../www/img/princessbride.jpg"},
-	{"img5":"../www/img/spiderman.jpg"},
-	{"img6":"../www/img/walle.jpg"},
-	{"img7":"../www/img/wizardofoz.jpg"}
+		{"img1":"../www/img/ratatouille.jpg"},
+		{"img2":"../www/img/findingnemo.jpg"},
+		{"img3":"../www/img/lionking.jpg"},
+		{"img4":"../www/img/walle.jpg"}
+	],
+	
+	"LevelQ2":[
+		{"img1":"../www/img/princessbride.jpg"},
+		{"img2":"../www/img/spiderman.jpg"},
+		{"img3":"../www/img/wizardofoz.jpg"}
 	],
 	
 	"LevelA1":[
 		{"answer1":"ratatouille"},
 		{"answer2":"findingnemo"},
 		{"answer3":"lionking"},
-		{"answer3":"princessbride"},
-		{"answer3":"spiderman"},
-		{"answer3":"walle"},
+		{"answer4":"walle"}
+	],
+	
+	"LevelA2":[
+		{"answer1":"princessbride"},
+		{"answer2":"spiderman"},
 		{"answer3":"wizardofoz"}
 	]
 }
