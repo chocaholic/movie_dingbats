@@ -1,25 +1,25 @@
 var jsonObject = {
-	"LevelQ1":[
+	"Cat1Q":[
 		{"img1":"../www/img/ratatouille.jpg"},
 		{"img2":"../www/img/findingnemo.jpg"},
 		{"img3":"../www/img/lionking.jpg"},
 		{"img4":"../www/img/walle.jpg"}
 	],
 	
-	"LevelQ2":[
+	"Cat2Q":[
 		{"img1":"../www/img/princessbride.jpg"},
 		{"img2":"../www/img/spiderman.jpg"},
 		{"img3":"../www/img/wizardofoz.jpg"}
 	],
 	
-	"LevelA1":[
+	"Cat1Ans":[
 		{"answer1":"ratatouille"},
 		{"answer2":"findingnemo"},
 		{"answer3":"lionking"},
 		{"answer4":"walle"}
 	],
 	
-	"LevelA2":[
+	"Cat2Ans":[
 		{"answer1":"princessbride"},
 		{"answer2":"spiderman"},
 		{"answer3":"wizardofoz"}
