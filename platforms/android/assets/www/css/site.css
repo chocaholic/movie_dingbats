@@ -20,3 +20,13 @@ img {
     color: red;
     text-align: center;
 }
+
+.useranswer.shake {
+    @include animation(wrong-log 0.3s);
+}
+
+@include keyframes (wrong-log) {
+  0%, 100% { left: 0px;}
+  20% , 60%{left: 15px;}
+  40% , 80%{left: -15px;}
+}

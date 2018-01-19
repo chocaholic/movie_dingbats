@@ -1,5 +1,4 @@
 var cat;
-//var save = JSON.parse(localStorage.getItem("save"));
 var lvl;
 $(document).ready(function () {
     
@@ -13,22 +12,39 @@ $(document).ready(function () {
         
         var saveCat;
         switch (cat) {
-        case "1":
-            saveCat = JSON.parse(localStorage.getItem("saveCat1"));
+        case "action":
+            saveCat = JSON.parse(localStorage.getItem("saveAction"));
             checkSave(saveCat);
             break;
-        case "2":
-            saveCat = JSON.parse(localStorage.getItem("saveCat2"));
+        case "adventure":
+            saveCat = JSON.parse(localStorage.getItem("saveAdventure"));
+            checkSave(saveCat);
+            break;
+        case "animated":
+            saveCat = JSON.parse(localStorage.getItem("saveAnimated"));
+            checkSave(saveCat);
+            break;
+        case "comedy":
+            saveCat = JSON.parse(localStorage.getItem("saveComedy"));
+            checkSave(saveCat);
+            break;
+        case "horror":
+            saveCat = JSON.parse(localStorage.getItem("saveHorror"));
+            checkSave(saveCat);
+            break;
+        case "romcom":
+            saveCat = JSON.parse(localStorage.getItem("saveRomCom"));
+            checkSave(saveCat);
+            break;
+        case "scifi":
+            saveCat = JSON.parse(localStorage.getItem("saveSciFi"));
+            checkSave(saveCat);
+            break;
+        case "war":
+            saveCat = JSON.parse(localStorage.getItem("saveWar"));
             checkSave(saveCat);
             break;
     }
-        
-//        if (save === null) {
-//            lvl = 1;
-//        }
-//        else {
-//            lvl = save["lvl"];
-//        }
         checkLevel();
     }
     //if url is index.html
@@ -51,11 +67,29 @@ function checkLevel() {
     
     //Load the right questions to the current category
     switch (cat) {
-        case "1":
-            jsonLvl = jsonObject.Cat1Q;
+        case "action":
+            jsonLvl = jsonObject.ActionQ;
             break;
-        case "2":
-            jsonLvl = jsonObject.Cat2Q;
+        case "adventure":
+            jsonLvl = jsonObject.AdventureQ;
+            break;
+        case "animated":
+            jsonLvl = jsonObject.AnimatedQ;
+            break;
+        case "comedy":
+            jsonLvl = jsonObject.ComedyQ;
+            break;
+        case "horror":
+            jsonLvl = jsonObject.HorrorQ;
+            break;
+        case "romcom":
+            jsonLvl = jsonObject.RomComQ;
+            break;
+        case "scifi":
+            jsonLvl = jsonObject.SciFiQ;
+            break;
+        case "war":
+            jsonLvl = jsonObject.WarQ;
             break;
     }
     
@@ -73,14 +107,44 @@ function checkLevel() {
     
 }
 
-$(".animLvl").click(function (event) {
-    loadTemplate();
-    localStorage.setItem("cat", 1);
-});
-
 $(".actionLvl").click(function (event) {
     loadTemplate();
-    localStorage.setItem("cat", 2);
+    localStorage.setItem("cat", "action");
+});
+
+$(".advLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "adventure");
+});
+
+$(".animLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "animated");
+});
+
+$(".comLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "comedy");
+});
+
+$(".horrorLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "horror");
+});
+
+$(".romcomLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "romcom");
+});
+
+$(".scifiLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "scifi");
+});
+
+$(".warLvl").click(function (event) {
+    loadTemplate();
+    localStorage.setItem("cat", "war");
 });
 
 $(".resetlvl").click(function (event) {
@@ -96,6 +160,7 @@ function loadTemplate() {
 
 $(".ansbtn").click(function (event) {
     event.preventDefault();
+    $(".wrong").hide();
 
     //get user answer and strip white space and change to lowercase
     var userAns = $("#ans").val();
@@ -105,11 +170,29 @@ $(".ansbtn").click(function (event) {
     
     //Load the right userAnss to the current category
     switch (cat) {
-        case "1":
-            jsonAns = jsonObject.Cat1Ans;
+        case "action":
+            jsonAns = jsonObject.ActionAns;
             break;
-        case "2":
-            jsonAns = jsonObject.Cat2Ans;
+        case "adventure":
+            jsonAns = jsonObject.AdventureAns;
+            break;
+        case "animated":
+            jsonAns = jsonObject.AnimatedAns;
+            break;
+        case "comedy":
+            jsonAns = jsonObject.ComedyAns;
+            break;
+        case "horror":
+            jsonAns = jsonObject.HorrorAns;
+            break;
+        case "romcom":
+            jsonAns = jsonObject.RomComAns;
+            break;
+        case "scifi":
+            jsonAns = jsonObject.SciFiAns;
+            break;
+        case "war":
+            jsonAns = jsonObject.WarAns;
             break;
     }
 
@@ -119,7 +202,6 @@ $(".ansbtn").click(function (event) {
     //Check user answer matches right answer
     if (userAns == Object.values(rightAns)) {
         $("#ans").val('');
-        $(".wrong").hide();
         $('#correctAns').modal('show');
         
         //Save user progress
@@ -127,6 +209,7 @@ $(".ansbtn").click(function (event) {
     }
     else {
         $(".wrong").show();
+        $(".useranswer").addClass('.shake');
     }
 });
 
@@ -138,11 +221,29 @@ function saveProgress(){
     };
     
     switch (cat) {
-        case "1":
-            localStorage.setItem("saveCat1", JSON.stringify(saveProgress));
+        case "action":
+            localStorage.setItem("saveAction", JSON.stringify(saveProgress));
             break;
-        case "2":
-            localStorage.setItem("saveCat2", JSON.stringify(saveProgress));
+        case "adventure":
+            localStorage.setItem("saveAdventure", JSON.stringify(saveProgress));
+            break;
+        case "animated":
+            localStorage.setItem("saveAnimated", JSON.stringify(saveProgress));
+            break;
+        case "comedy":
+            localStorage.setItem("saveComedy", JSON.stringify(saveProgress));
+            break;
+        case "horror":
+            localStorage.setItem("saveHorror", JSON.stringify(saveProgress));
+            break;
+        case "romcom":
+            localStorage.setItem("saveRomCom", JSON.stringify(saveProgress));
+            break;
+        case "scifi":
+            localStorage.setItem("saveSciFi", JSON.stringify(saveProgress));
+            break;
+        case "war":
+            localStorage.setItem("saveWar", JSON.stringify(saveProgress));
             break;
     }
     

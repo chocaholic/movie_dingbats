@@ -1,25 +1,49 @@
 var jsonObject = {
-	"LevelQ1":[
-		{"img1":"../www/img/ratatouille.jpg"},
-		{"img2":"../www/img/findingnemo.jpg"},
-		{"img3":"../www/img/lionking.jpg"},
-		{"img4":"../www/img/walle.jpg"}
+	"AnimatedQ":[
+		{"img1":"../www/img/animated/walle.jpg"},
+		{"img2":"../www/img/animated/up.jpg"},
+		{"img3":"../www/img/animated/bolt.jpg"},
+		{"img4":"../www/img/animated/insideout.jpg"},
+		{"img5":"../www/img/animated/junglebook.jpg"},
+		{"img6":"../www/img/animated/wreckitralph.jpg"},
+		{"img7":"../www/img/animated/kungfupanda.jpg"},
+		{"img8":"../www/img/animated/bambi.jpg"},
+		{"img9":"../www/img/animated/chickenrun.jpg"},
+		{"img10":"../www/img/animated/tangled.jpg"},
+		{"img11":"../www/img/animated/ratatouille.jpg"},
+		{"img12":"../www/img/animated/findingnemo.jpg"},
+		{"img13":"../www/img/animated/brave.jpg"},
+		{"img14":"../www/img/animated/shrek.jpg"},
+		{"img15":"../www/img/animated/lionking.jpg"},
+		{"img16":"../www/img/animated/theincredibles.jpg"}
 	],
 	
-	"LevelQ2":[
+	"ActionQ":[
 		{"img1":"../www/img/princessbride.jpg"},
 		{"img2":"../www/img/spiderman.jpg"},
 		{"img3":"../www/img/wizardofoz.jpg"}
 	],
 	
-	"LevelA1":[
-		{"answer1":"ratatouille"},
-		{"answer2":"findingnemo"},
-		{"answer3":"lionking"},
-		{"answer4":"walle"}
+	"AnimatedAns":[
+		{"answer1":"walle"},
+		{"answer2":"up"},
+		{"answer3":"bolt"},
+		{"answer4":"insideout"},
+		{"answer5":"junglebook"},
+		{"answer6":"wreckitralph"},
+		{"answer7":"kungfupanda"},
+		{"answer8":"bambi"},
+		{"answer9":"chickenrun"},
+		{"answer10":"tangled"},
+		{"answer11":"ratatouille"},
+		{"answer12":"findingnemo"},
+		{"answer13":"brave"},
+		{"answer14":"shrek"},
+		{"answer15":"lionking"},
+		{"answer16":"theincredibles"},
 	],
 	
-	"LevelA2":[
+	"ActionAns":[
 		{"answer1":"princessbride"},
 		{"answer2":"spiderman"},
 		{"answer3":"wizardofoz"}
